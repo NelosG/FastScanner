@@ -174,14 +174,14 @@ public class FastScanner implements AutoCloseable {
         if (hasNextIntOrLongImpl(false, true)) {
             return (int) foundedNextLong;
         }
-        throw new InputMismatchException();
+        throw new InputMismatchException("Not an int");
     }
 
     public int nextLong() throws IOException {
         if (hasNextIntOrLongImpl(false, false)) {
             return (int) foundedNextLong;
         }
-        throw new InputMismatchException();
+        throw new InputMismatchException("Not a long");
     }
 
     public String nextLine() throws IOException {
